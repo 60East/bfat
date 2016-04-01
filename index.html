@@ -56,11 +56,13 @@ title: BFat: The Only Message Type with a Comment Section Data Type
 
 <p><strong>Fully extensible and self describing</strong>: Each tag and value has an optional “notes” section that can contain anything. If you need a new data type, just put the spec in that section – all your downstream consumers have to do is read the spec and implement the data type. Future proof!</p>
 
+<p><strong>Universal language support</strong>: BFat is provided in all major, minor, specialized, obscure, and even apocryphal programming languages. <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
+
 <p><strong>User-defined types</strong>: Don't want to BFat?  Make your own type and store it in the User Defined Message Type field.  You can also store the schema, if you believe in that sort of thing, in the User Defined Message Type Schema field.</p>
 
-<p><strong>Optional Schematization</strong>: We provide <code>bfatter</code>, a code generation tool which parses schemas, message formats, and IDL in any known format to generate a parser for an equivalent bfat message. You can even mix and match formats in the same file and <code>bfatter</code> will figure it out. <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
+<p><strong>Optional Schematization</strong>: We provide <code>bfatter</code>, a code generation tool which parses schemas, message formats, and IDL in any known format to generate a parser for an equivalent bfat message. You can even mix and match formats in the same file and <code>bfatter</code> will figure it out. <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
 
-<p><strong>Perfect encoding</strong>: The “memory dump” data type provides a perfect, full-fidelity representation of any object or data structure with zero encoding time. <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
+<p><strong>Perfect encoding</strong>: The “memory dump” data type provides a perfect, full-fidelity representation of any object or data structure with zero encoding time. <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup></p>
 
 <div class="footnotes" class="inner">
   <hr>
@@ -70,10 +72,13 @@ title: BFat: The Only Message Type with a Comment Section Data Type
       <p>Our on-staff linguist estimates that UTF-256 is sufficient to handle expected language evolution for the next 2^23 years: however, we are investigating UTF-1024 for BFat version 2 for better future-proofing. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>Actually, since the format is self-describing, all the parser does is output a version of the regular bfat library that fails with version compatibility errors if you don’t regenerate it every few months. Which is pretty much the same thing. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+       <p>Beyond self-describing, each message comes with a full Javascript library to parse it. Don't use Javascript?  No worries, if you're thinking "But, I don't Javascript!", then there's also a Javascript library for generating a library in your prefered language, whether it's Prolog, Befunge, or brainf*ck. Minor customization may be required.<a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>Version 1 of BFat does not support decoding of “memory dump” data types. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p>Actually, since the format is self-describing, all the parser does is output a version of the regular bfat library that fails with version compatibility errors if you don’t regenerate it every few months. Which is pretty much the same thing. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Version 1 of BFat does not support decoding of “memory dump” data types. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
